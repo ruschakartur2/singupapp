@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="art-delail">
+<div class="article-entry">
+<h2>{{ object.title }}</h2>
+<p class="detail">by {{ object.author }} | {{ object.date }}</p>
+<p>{{ object.body }}</p>
+</div>
+    {% if user.username == article.author.username %}
+<p class=""><a class="btn btn-warning" href="{% url 'article_edit' article.pk %}">Edit</a>  <a class="btn btn-danger" style="margin-left:1rem" href="{% url 'article_delete' article.pk %}">Delete</a></p>
+    {% endif %}
+    <p>Back to <a class="badge badge-dark " href="{% url 'article_list' %}">All Articles</a>.</p>
+</div>
+{% endblock content %}
