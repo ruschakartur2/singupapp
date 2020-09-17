@@ -136,3 +136,4 @@ EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 
 django_heroku.settings(locals())
+ALLOWED_HOSTS = ['*']
