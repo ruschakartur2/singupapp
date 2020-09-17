@@ -1,1 +1,1 @@
-web: gunicorn signupapp.wsgi --log-file -
+web: gunicorn singupapp.wsgi --log-file -
